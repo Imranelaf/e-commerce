@@ -23,7 +23,7 @@ const fadeImages = [
 
 export default function Slider() {
   return (
-    <div className="w-full h-[calc(100vh-100px)]"> 
+    <div className="w-full lg:h-[85vh] h-[60vh]"> 
       <Swiper
         modules={[Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
@@ -41,7 +41,7 @@ export default function Slider() {
             <img 
               src={item.url} 
               alt={item.caption} 
-              className="w-full h-full object-full rounded-lg transition-all duration-[1000ms] ease-linear"
+              className="w-full h-full object-full aspect-auto transition-all duration-[1000ms] ease-linear"
             />
           </SwiperSlide>
         ))}

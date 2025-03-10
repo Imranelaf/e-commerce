@@ -58,11 +58,12 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`md:hidden transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
-        <ul className="flex flex-col items-center space-y-4 py-4 bg-white dark:bg-gray-900">
+        <ul className="flex flex-col items-center space-y-4 py-4 bg-white dark:bg-gray-900 absolute z-[10] w-screen h-full fixed overflow-hidden">
           {typesOfProducts.map((item, index) => (
             <li key={index} className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
               {item}
             </li>
+           
           ))}
           <li className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">ACCOUNT</li>
           <li className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">HELP</li>
