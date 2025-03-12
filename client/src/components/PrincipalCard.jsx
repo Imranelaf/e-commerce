@@ -23,7 +23,7 @@ function PrincipalCard() {
     <div className="w-auto lg:h-[90vh] h-[40vh] lg:m-10 my-6">
       
       {/* Grid Container */}
-      <div className={`relative grid grid-cols-${images.length} gap-4 h-full w-full`}>
+      <div className={`relative grid grid-cols-3 gap-4 h-full w-full`}>
         
         {images.map((item) => (
           <div key={item.caption} className="relative h-full w-full overflow-hidden group">
