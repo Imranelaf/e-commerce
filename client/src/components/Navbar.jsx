@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-function Navbar() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const typesOfProducts = ["MEN", "WOMEN", "SOCKS", "NEW ARRIVALS"];
 
@@ -27,22 +27,22 @@ function Navbar() {
 
         {/* Logo */}
         <div className="w-1/3 flex justify-center">
-          <Image src="/logo.png" alt="Logo" width={100} height={50} />
+          <Image src="/images/logo.png" alt="Logo" width={100} height={50} />
         </div>
 
         {/* Icons (Right Side) */}
         <ul className="hidden md:flex w-1/3 items-center justify-end pr-20">
         <li className="pr-6 cursor-pointer">
-            <Image src={'/search.png'} width={20} height={20} alt="Account"/> 
+            <Image src={'/icons/search.png'} width={20} height={20} alt="Account"/> 
           </li>
           <li className="pr-6 cursor-pointer">
-            <Image src={'/user.png'} width={20} height={20} alt="Account"/> 
+            <Image src={'/icons/user.png'} width={20} height={20} alt="Account"/> 
           </li>
           <li className="pr-6 cursor-pointer">
-            <Image src={'/question.png'} width={20} height={20} alt="Questions"/> 
+            <Image src={'/icons/question.png'} width={20} height={20} alt="Questions"/> 
           </li>
           <li className="pr-6 cursor-pointer">
-            <Image src={'/cart.png'} width={25} height={20} alt="Shopping"/> 
+            <Image src={'/icons/cart.png'} width={25} height={20} alt="Shopping"/> 
           </li>
         </ul>
         {<ul className="lg:hidden md:hidden">
@@ -72,5 +72,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;

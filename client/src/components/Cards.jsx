@@ -1,5 +1,3 @@
-import React from 'react';
-
 const images = [
   {
     url: "https://images.unsplash.com/photo-1734639528206-59e0864b3863?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
@@ -15,7 +13,8 @@ const images = [
     url: "https://images.unsplash.com/photo-1734377543826-1a64e1d4c5fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8",
     caption: 3,
     genre: "Kids"
-  }
+  },
+ 
 ];
 
 function PrincipalCard() {
@@ -31,7 +30,7 @@ function PrincipalCard() {
             <img 
               src={item.url} 
               alt={`Image ${item.caption}`} 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-fit transition-transform duration-700 group-hover:scale-110"
             />
             
             <a 

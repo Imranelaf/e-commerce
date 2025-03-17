@@ -5,7 +5,7 @@ const slogan = {
     description: "By looking to the world’s greatest innovator—Nature—we create shoes that deliver unrivaled comfort that you feel good in and feel good about."
 }
 
-function Slogan() {
+export default function Slogan() {
   return (
     
 
@@ -20,5 +20,3 @@ function Slogan() {
     
   )
 }
-
-export default Slogan

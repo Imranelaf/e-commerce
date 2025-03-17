@@ -42,7 +42,7 @@ const cards = [
   }
 ];
 
-function CardsSlider() {
+export default function CardsSlider() {
   return (
     <div className="flex justify-center items-center w-full h-auto bg-gray-100 my-6">
       <div className="w-full max-w-screen-xl">
@@ -98,5 +98,3 @@ function CardsSlider() {
 
   );
 }
-
-export default CardsSlider;
