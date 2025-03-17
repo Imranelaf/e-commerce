@@ -1,17 +1,17 @@
 import Navbar from "@/components/Navbar";
 import PrincipalCard from "@/components/PrincipalCard";
-import Slider from "@/components/Slider";
+import ImagesSlider from "@/components/ImagesSlider";
 import Slogan from "@/components/Slogan";
-import PhoneSlider from "../components/PhoneSlider";
+import CardsSlider from "../components/CardsSlider";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <Slider />
+      <ImagesSlider />
       <PrincipalCard />
       <Slogan />
-      <PhoneSlider />
+      <CardsSlider />
 
     </div>
   );

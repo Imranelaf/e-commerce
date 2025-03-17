@@ -21,7 +21,7 @@ const fadeImages = [
     },
 ];
 
-export default function Slider() {
+export default function ImagesSlider() {
   return (
     <div className="w-full lg:h-[85vh] h-[60vh]"> 
       <Swiper
