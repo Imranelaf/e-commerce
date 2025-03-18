@@ -47,7 +47,7 @@ export default function Navbar() {
         </ul>
         {<ul className="lg:hidden md:hidden">
         <Image 
-            src={'/cart.png'} 
+            src={'/icons/cart.png'} 
             alt="Shopping" 
             width={40} 
             height={40} 

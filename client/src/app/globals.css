@@ -6,6 +6,7 @@
   --foreground: #171717;
   --font-primary: "Salsa", cursive, sans-serif;
   --font-secondary: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {

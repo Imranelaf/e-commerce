@@ -71,7 +71,7 @@ export default function CardsSlider() {
               spaceBetween: 40,
             },
           }}
-          className="w-full"
+          className="w-full lg:my-5 mb-4"
         >
           {cards.map((item) => (
             <SwiperSlide 
