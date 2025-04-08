@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,16 +28,20 @@ export default function Navbar() {
 
         {/* Logo */}
         <div className="w-1/3 flex justify-center">
+        <Link href={"/"}>
           <Image src="/images/logo.png" alt="Logo" width={100} height={50} />
+        </Link>
         </div>
 
         {/* Icons (Right Side) */}
         <ul className="hidden md:flex w-1/3 items-center justify-end pr-20">
         <li className="pr-6 cursor-pointer">
-            <Image src={'/icons/search.png'} width={20} height={20} alt="Account"/> 
+            <Image src={'/icons/search.png'} width={20} height={20} alt="Search"/> 
           </li>
           <li className="pr-6 cursor-pointer">
+            <Link href="/login">
             <Image src={'/icons/user.png'} width={20} height={20} alt="Account"/> 
+            </Link>
           </li>
           <li className="pr-6 cursor-pointer">
             <Image src={'/icons/question.png'} width={20} height={20} alt="Questions"/> 
@@ -65,7 +70,7 @@ export default function Navbar() {
             </li>
            
           ))}
-          <li className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">ACCOUNT</li>
+          <li className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition"><Link href={"/login"}>ACCOUNT</Link> </li>
           <li className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">HELP</li>
         </ul>
       </div>

@@ -13,15 +13,17 @@ export default function Login() {
     };
 
     return (
-        <div className="w-full h-screen flex justify-center items-center bg-gray-100">
-            <div className="w-2/5 h-auto m-3 p-4 bg-white">
+        <div className="w-full h-screen flex justify-center lg:items-center lg:bg-gray-100">
+            <div className="lg:w-2/5 h-auto m-3 p-4 bg-white w-auto">
                 <div className="flex w-full justify-center">
+                   
                     <img
                         src="/images/logo.png"
                         width={200}
                         height={200}
                         loading="lazy"
                         alt="Logo"
+                        className="lg:m-0 mt-15"
                     />
                 </div>
                 <h1 className="text-2xl font-bold m-5">Log in</h1>

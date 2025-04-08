@@ -81,7 +81,7 @@ export default function CardsSlider() {
               <img 
                 src={item.url} 
                 alt={`Slide ${item.caption}`} 
-                className="w-[450px] h-[300px] object-cover"
+                className="w-[450px] h-[300px] object-cover cursor-pointer transition-transform duration-700 hover:scale-103"
               />
               <div className="relative w-full mt-2">
                 <div>
