@@ -3,7 +3,7 @@ const productData = {
   title: "Women's Tree Lounger",
   description: "Lightweight Slip-Ons Made for Easy Everyday Wear.",
   price: 29.99,
-  discount: 20.99,
+  discount: 0,
   images: [
     "https://images.unsplash.com/photo-1748024093647-bbbfbe2c0c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
     "https://images.unsplash.com/photo-1726137569911-bc03e55fd87f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",

@@ -5,9 +5,15 @@ const ProductsInfos = (product) => {
 
     const [selectedColor, setSelectedColor] = useState(product.props.variants[0].color);
     const [selectedSize, setSelectedSize] = useState();
+    const [stock, setStock] = useState();
     const selectedVariant = product.props.variants.find(v => v.color === selectedColor);
 
+    const orderHandler = (size, stock)=>{
 
+        console.log(size, stock, selectedColor);
+        setSelectedSize(size);
+        setStock(stock);
+    } 
 
     return (
         <div className="w-5/12 bg-white rounded shadow p-4 space-y-2">
@@ -48,14 +54,13 @@ const ProductsInfos = (product) => {
                     {selectedVariant.sizes.map(({ size, stock }) => (
                         <button
                             key={size}
-                            disabled={stock === 0}
-                            onClick={() => setSelectedSize(size)}
-                            className={`h-[50px] w-[50px] mt-2 px-3 py-1 border ${stock === 0
-                                    ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                            onClick={() => orderHandler(size, stock)}
+                            className={`h-[50px] w-[50px] mt-2 px-3 py-1 border cursor-pointer ${stock === 0
+                                    ? "bg-gray-200 text-gray-400"
                                     : "hover:bg-gray-300 duration-400"
                                 }
               ${size === selectedSize
-                                && "bg-gray-700 text-white hover:bg-gray-700"
+                                && "bg-gray-700 text-white hover:bg-gray-700 border"
                                 }
               `}
                         >
@@ -64,6 +69,20 @@ const ProductsInfos = (product) => {
                     ))}
                 </div>
             </div>
+
+             {
+                selectedSize != undefined ?( stock != 0 ?
+                <button className="my-4 px-4 w-full py-2 bg-white tracking-widest text-lg text-black hover:bg-gray-800 hover:text-white transition duration-200 text-sm border font-semibold shadow-lgb cursor-pointer">ADD TO CART - ${product.props.price} </button>
+                 :
+                 <>
+                 <p className="text-red-500 font-semibold">Out of stock</p>
+                 <button className="my-4 px-4 w-full py-2 bg-white tracking-widest text-lg text-black hover:bg-gray-800 hover:text-white transition duration-200 text-sm border font-semibold shadow-lgb cursor-pointer">Notified me </button>  
+                 </>
+                )
+                :
+                <button className="my-4 px-4 w-full py-2 tracking-widest text-lg text-gray-600 bg-gray-200  text-sm border font-semibold shadow-lgb">SELELCT THE SIZE AND COLOR  </button>
+            }       
+
         </div>
     );
 };
