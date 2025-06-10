@@ -1,3 +1,5 @@
+import Button from "./common/Button";
+
 const images = [
   {
     url: "https://images.unsplash.com/photo-1734639528206-59e0864b3863?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
@@ -39,9 +41,7 @@ function PrincipalCard() {
               rel="noopener noreferrer"
               className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
-              <button className="px-4 py-2 bg-white text-black hover:bg-gray-800 hover:text-white transition duration-200 text-sm tracking-wider font-semibold shadow-lgb cursor-pointer">
-                Shop for {item.genre}
-              </button>
+              <Button className="border-0">Shop for {item.genre}</Button>
             </a>
 
           </div>

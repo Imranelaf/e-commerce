@@ -1,6 +1,6 @@
 'use client'
 
-import ProductsInfos from "@/services/ProductsInfos";
+import ProductDetails from "@/services/ProductDetails";
 import productData from "@/store/data";
 import Image from "next/image";
 import { useState } from "react";
@@ -54,7 +54,7 @@ export default function Product() {
       </div>
 
       {/* Product Info */}
-        <ProductsInfos props={productImages} />
+        <ProductDetails product={productImages} />
     </div>
   );
 }
