@@ -5,12 +5,14 @@ import AddToCartButton from "@/components/productDetails/AddToCartButton";
 import ColorSelector from "@/components/productDetails/ColorSelector";
 import SizeSelector from "@/components/productDetails/SizeSelector";
 import ProductDescription from "@/components/productDetails/ProductDescription";
+import Notified from "@/components/productDetails/Notified";
 
 const ProductDetails = ({ product }) => {
     // States for selected color, size, and stock quantity
     const [selectedColor, setSelectedColor] = useState(product.variants[0].color);
     const [selectedSize, setSelectedSize] = useState(null);
     const [stock, setStock] = useState(null);
+    const [notified, setNotified] = useState(false);
 
     // Find the variant that matches the selected color
     const selectedVariant = product.variants.find(
@@ -56,8 +58,22 @@ const ProductDetails = ({ product }) => {
                 selectedSize={selectedSize}
                 stock={stock}
                 price={product.price}
+                notified={notified}
+                notifiedFunction={setNotified}
             />
+
+            {
+            notified &&
+            <div className="fixed top-0 left-0 z-50 h-screen w-screen flex justify-center items-center bg-gray-500/60 backdrop-blur-sm p-4">
+                <Notified 
+                notified={notified}
+                notifiedFunction={setNotified}/>
+            </div>
+            }
+
         </div>
+        
+        
     );
 };
 

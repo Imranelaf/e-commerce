@@ -1,9 +1,15 @@
 import Button from "@/components/common/Button";
 
-const Notified = () => {
+const Notified = ({notifiedFunction, notified}) => {
   return (
-    <div className="min-h-screen w-full flex justify-center items-center p-4">
-      <div className="w-full max-w-2xl px-6 sm:px-10 py-8 flex flex-col border rounded-md shadow-md bg-white">
+    <div className="absolute h-screen w-screen flex justify-center items-center">
+      <div className="w-full max-w-2xl px-6 sm:px-10 py-8 flex flex-col border rounded-md shadow-md bg-white relative">
+        <button className="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition cursor-pointer text-2xl"
+        onClick={()=>{notifiedFunction(!notified)}}
+        >
+          ❌
+        </button>
+
         <h1 className="font-black text-2xl sm:text-3xl text-center p-4">
           Colors Always Come And Go
         </h1>
