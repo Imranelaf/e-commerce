@@ -6,6 +6,7 @@ import ColorSelector from "@/components/productDetails/ColorSelector";
 import SizeSelector from "@/components/productDetails/SizeSelector";
 import ProductDescription from "@/components/productDetails/ProductDescription";
 import Notified from "@/components/productDetails/Notified";
+import Checkout from "@/components/Checkout";
 
 const ProductDetails = ({ product }) => {
     // States for selected color, size, and stock quantity
@@ -14,6 +15,8 @@ const ProductDetails = ({ product }) => {
     const [stock, setStock] = useState(null);
     const [notified, setNotified] = useState(false);
 
+    console.log(product);
+    
     // Find the variant that matches the selected color
     const selectedVariant = product.variants.find(
         (variant) => variant.color === selectedColor
@@ -70,6 +73,15 @@ const ProductDetails = ({ product }) => {
                 notifiedFunction={setNotified}/>
             </div>
             }
+            <div className="fixed z-50 top-0 left-0  overflow-hidden  h-screen w-screen bg-gray-500/80">
+            <Checkout 
+                title={product.title}
+                image={product.images[0]}
+                price={product.price}
+                size={selectedSize}
+                color={selectedColor}
+            />
+            </div>
 
         </div>
         

@@ -1,7 +1,7 @@
 const ColorSelector = ({ selectedColor, variants, onSelectColor }) => {
   return (
     <div>
-      <h4 className="text-md text-gray-500 mt-4 uppercase">COLOR:</h4>
+      <h4 className="text-md text-gray-500 mt-4 uppercase">COLOR: {selectedColor}</h4>
       <div className="flex gap-2">
         {variants.map((variant) => (
           <button
