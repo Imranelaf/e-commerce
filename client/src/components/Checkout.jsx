@@ -1,6 +1,6 @@
 import Button from "./common/Button";
 
-const Checkout = ({ title, image, price, color, size }) => {
+const Checkout = ({ title, image, price, color, size, checkout, setcheckout }) => {
     return (
         <div className="fixed inset-0 z-50 flex justify-end items-center bg-black/50 backdrop-blur-sm">
             <div className="h-full w-full md:w-3/5 lg:w-2/5 bg-white p-6 shadow-xl relative overflow-y-auto">
@@ -8,6 +8,7 @@ const Checkout = ({ title, image, price, color, size }) => {
                 <button
                     className="absolute top-4 text-gray-500 hover:text-red-500 transition text-2xl"
                     aria-label="Close"
+                    onClick={()=>{setcheckout(false)}}
                 >
                     ❌
                 </button>

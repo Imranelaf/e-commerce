@@ -1,6 +1,6 @@
 import Button from "../common/Button";
 
-const AddToCartButton = ({ selectedSize, stock, price, notifiedFunction, notified}) => {
+const AddToCartButton = ({ selectedSize, stock, price, notifiedFunction, checkout}) => {
   if (!selectedSize) {
     return (
       <Button className="bg-gray-500 text-gray-400">
@@ -12,7 +12,7 @@ const AddToCartButton = ({ selectedSize, stock, price, notifiedFunction, notifie
   if (stock === 0) {
     return (
       <>
-        <Button onClick={() => notifiedFunction(!notified)}>
+        <Button onClick={() => notifiedFunction(true)}>
         Notify me
         </Button>
 
@@ -20,7 +20,7 @@ const AddToCartButton = ({ selectedSize, stock, price, notifiedFunction, notifie
     );
   }
 
-  return <Button>ADD TO CART - ${price}</Button>;
+  return <Button onClick={()=>checkout(true)}>ADD TO CART - ${price}</Button>;
 };
 
 export default AddToCartButton;

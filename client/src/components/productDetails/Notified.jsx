@@ -1,11 +1,11 @@
 import Button from "@/components/common/Button";
 
-const Notified = ({notifiedFunction, notified}) => {
+const Notified = ({notifiedFunction}) => {
   return (
     <div className="absolute h-screen w-screen flex justify-center items-center">
       <div className="w-full max-w-2xl px-6 sm:px-10 py-8 flex flex-col border rounded-md shadow-md bg-white relative">
         <button className="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition cursor-pointer text-2xl"
-        onClick={()=>{notifiedFunction(!notified)}}
+        onClick={()=>{notifiedFunction(false)}}
         >
           ❌
         </button>

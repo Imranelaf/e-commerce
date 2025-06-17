@@ -14,6 +14,7 @@ const ProductDetails = ({ product }) => {
     const [selectedSize, setSelectedSize] = useState(null);
     const [stock, setStock] = useState(null);
     const [notified, setNotified] = useState(false);
+    const [check, setCheck] = useState(false);
 
     console.log(product);
     
@@ -63,6 +64,8 @@ const ProductDetails = ({ product }) => {
                 price={product.price}
                 notified={notified}
                 notifiedFunction={setNotified}
+                checkout={setCheck}
+                
             />
 
             {
@@ -73,6 +76,8 @@ const ProductDetails = ({ product }) => {
                 notifiedFunction={setNotified}/>
             </div>
             }
+
+            { check &&
             <div className="fixed z-50 top-0 left-0  overflow-hidden  h-screen w-screen bg-gray-500/80">
             <Checkout 
                 title={product.title}
@@ -80,8 +85,10 @@ const ProductDetails = ({ product }) => {
                 price={product.price}
                 size={selectedSize}
                 color={selectedColor}
+                setcheckout={setCheck}
             />
             </div>
+            }
 
         </div>
         
